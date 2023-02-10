@@ -17,15 +17,15 @@ void Set_Bin_Dir(uint8 port, uint8 pinnum, uint8 dir)
 				  else ClrBit(MYDDRA,pinnum); 
 			break;
 		case 'b':
-		case 'B': if (dir == 1) SetBit(MYDDRA, pinnum);
+		case 'B': if (dir == 1) SetBit(MYDDRB, pinnum);
 				  else ClrBit(MYDDRB,pinnum);
 			break;
 		case 'c':
-		case 'C': if (dir == 1) SetBit(MYDDRA, pinnum);
+		case 'C': if (dir == 1) SetBit(MYDDRC, pinnum);
 				  else ClrBit(MYDDRC,pinnum);
 			break;
 		case 'd':
-		case 'D': if (dir == 1) SetBit(MYDDRA, pinnum);
+		case 'D': if (dir == 1) SetBit(MYDDRD, pinnum);
 				  else ClrBit(MYDDRD,pinnum);
 			break;
 	}
