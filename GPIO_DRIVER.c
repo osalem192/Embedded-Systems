@@ -93,4 +93,48 @@ uint8 Pin_Read(uint8 port, uint8 pinnum)
 		return z;
 } 
 
-// you can change the whole port by simply changing pinnum to 0xFF
+void Set_Port_Dir(uint8 port, uint8 dir)
+{
+	switch (port)
+	{
+		case 'a':
+		case 'A': if (dir == 1) MYDDRA = 0xff;
+		else MYDDRA = 0;
+		break;
+		case 'b':
+		case 'B': if (dir == 1) MYDDRB = 0xff;
+		else MYDDRB = 0;
+		break;
+		case 'c':
+		case 'C': if (dir == 1) MYDDRC = 0xff;
+		else MYDDRC = 0;
+		break;
+		case 'd':
+		case 'D': if (dir == 1) MYDDRD = 0xff;
+		else MYDDRD = 0;
+		break;
+	}
+}
+
+void Port_Write(uint8 port, uint8 dir)
+{
+	switch (port)
+	{
+		case 'a':
+		case 'A': if (dir == 1) MYPORTA = 0xff;
+		else MYPORTA = 0;
+		break;
+		case 'b':
+		case 'B': if (dir == 1) MYPORTB = 0xff;
+		else MYPORTB = 0;
+		break;
+		case 'c':
+		case 'C': if (dir == 1) MYPORTC = 0xff;
+		else MYPORTC = 0;
+		break;
+		case 'd':
+		case 'D': if (dir == 1) MYPORTD = 0xff;
+		else MYPORTD = 0;
+		break;
+	} 
+}
